@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public GameObject gun;
-    public Camera cam;
-    public GameObject PowerBarScript;
-    public GameObject gameOverCanvas;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private Camera cam;
+    [SerializeField] private GameObject PowerBarScript;
+    [SerializeField] private GameObject gameOverCanvas;
     public static bool ifLevelComplete = false;
 
     private void Start()

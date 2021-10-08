@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
-    public float cameraSensitivity;
-    public GameObject gun;
-    public Camera cam;
-    public Image aim;
-    public float smooth = 5f;
+    [SerializeField] private float cameraSensitivity;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private Camera cam;
+    [SerializeField] private Image aim;
+    [SerializeField] private float smooth = 5f;
     Vector2 lookInput;
     float cameraPitch;
     

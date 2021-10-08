@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public ParticleSystem muzzleEffect;
-    public Camera cam;
-    public GameObject brush;
-    public float brushSize = 0.1f;
+    [SerializeField] private ParticleSystem muzzleEffect;
+    [SerializeField] private Camera cam;
+    [SerializeField] private GameObject brush;
+    [SerializeField] private float brushSize = 0.1f;
 
     private float range = 20000f;
     private Renderer obje;
@@ -43,6 +43,7 @@ public class Gun : MonoBehaviour
                 {
                     var goBrush = Instantiate(brush, hit.point, Quaternion.identity, hit.transform);
                     goBrush.transform.localScale = Vector3.one * brushSize;
+                    
                     if (hit.transform.name == "-z")
                     {
                         goBrush.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -72,7 +73,7 @@ public class Gun : MonoBehaviour
                         builds.Painting();
 
                     }
-                } 
+                }
             }
         }
     }

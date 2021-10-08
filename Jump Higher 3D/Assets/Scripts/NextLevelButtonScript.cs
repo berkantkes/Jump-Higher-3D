@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelButtonScript : MonoBehaviour
 {
-    public void NextLevel()
+    [SerializeField] private void NextLevel()
     {
         SceneManager.LoadScene("GameplayScene");
     }

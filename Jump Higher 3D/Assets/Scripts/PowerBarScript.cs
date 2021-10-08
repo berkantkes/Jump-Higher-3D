@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PowerBarScript : MonoBehaviour
 {
-    public Image PowerBarImage;
+    [SerializeField] private Image PowerBarImage;
 
     bool isPowerUp = true;
     bool isDirection = true;

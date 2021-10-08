@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
-    public Slider slider;
-    public Text progressText;
-    public GameObject levelCompleteCanvas;
-    public GameObject PlayerMove;
+    [SerializeField] private Slider slider;
+    [SerializeField] private Text progressText;
+    [SerializeField] private GameObject levelCompleteCanvas;
+    [SerializeField] private GameObject PlayerMove;
 
     public void SetMaxHealth(int health)
     {

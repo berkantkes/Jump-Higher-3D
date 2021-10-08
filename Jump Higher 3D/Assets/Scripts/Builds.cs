@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Builds : MonoBehaviour
 {
-    public GameObject progressBar;
+    [SerializeField] private GameObject progressBar;
     private int maxhealth = 10;
     
 
