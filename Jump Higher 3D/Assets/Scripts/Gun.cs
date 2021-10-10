@@ -6,8 +6,8 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private ParticleSystem muzzleEffect;
     [SerializeField] private Camera cam;
-    [SerializeField] private GameObject brush;
-    [SerializeField] private float brushSize = 1f;
+    [SerializeField] private GameObject decal;
+    [SerializeField] private float decalSize = 1f;
 
     private float range = 20000f;
     private Renderer obje;
@@ -41,8 +41,8 @@ public class Gun : MonoBehaviour
                 Builds builds = hit.transform.GetComponent<Builds>();
                 if (builds != null)
                 {
-                    var goBrush = Instantiate(brush, hit.point, Quaternion.identity, hit.transform);
-                    goBrush.transform.localScale = Vector3.one * brushSize;
+                    var goDecal = Instantiate(decal, hit.point, Quaternion.identity, hit.transform);
+                    goDecal.transform.localScale = Vector3.one * decalSize;
                     builds.Painting();
                 }
             }
