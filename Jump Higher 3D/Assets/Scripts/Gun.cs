@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleEffect;
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject brush;
-    [SerializeField] private float brushSize = 0.1f;
+    [SerializeField] private float brushSize = 1f;
 
     private float range = 20000f;
     private Renderer obje;
@@ -43,36 +43,7 @@ public class Gun : MonoBehaviour
                 {
                     var goBrush = Instantiate(brush, hit.point, Quaternion.identity, hit.transform);
                     goBrush.transform.localScale = Vector3.one * brushSize;
-                    
-                    if (hit.transform.name == "-z")
-                    {
-                        goBrush.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                        builds.Painting();
-
-                    }
-                    else if (hit.transform.name == "+x")
-                    {
-                        goBrush.transform.rotation = Quaternion.Euler(-90, 0, -90);
-                        builds.Painting();
-                    }
-                    else if (hit.transform.name == "+z")
-                    {
-                        goBrush.transform.rotation = Quaternion.Euler(-90, 0, -180);
-                        builds.Painting();
-
-                    }
-                    else if (hit.transform.name == "-x")
-                    {
-                        goBrush.transform.rotation = Quaternion.Euler(-90, 0, -270);
-                        builds.Painting();
-
-                    }
-                    else if (hit.transform.name == "+y")
-                    {
-                        goBrush.transform.rotation = Quaternion.Euler(0, 90, 0);
-                        builds.Painting();
-
-                    }
+                    builds.Painting();
                 }
             }
         }
